@@ -90,7 +90,7 @@ def auto_send_news():
     bot = Bot(token=API_TOKEN)
     week, today = get_forex_news()
     msg = format_news_for_telegram(week, today)
-    bot.send_message(chat_id=YOUR_CHAT_ID, text=msg, parse_mode="HTML")
+    bot.send_message(chat_id=YOUR_CHAT_ID, text=msg, parse_mode="HTML", message_thread_id=40232)
 
 def main():
     updater = Updater(API_TOKEN, use_context=True)
